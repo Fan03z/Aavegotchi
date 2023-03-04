@@ -15,3 +15,5 @@ flat
 botDaddies.ts
 botDaddies2.ts
 out
+# 防macos生成的文件
+.DS_Store
