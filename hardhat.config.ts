@@ -36,12 +36,12 @@ require("./tasks/updateWearableExceptions");
 
 export default {
   etherscan: {
-    apiKey: process.env.POLYGON_API_KEY || "",
+    apiKey: process.env.POLYGONSCAN_API_KEY || "",
   },
   networks: {
     hardhat: {
       forking: {
-        url: process.env.MATIC_URL || "",
+        url: [process.env.MATIC_URL || ""],
         timeout: 12000000,
         // blockNumber: 31480850,
       },
@@ -57,7 +57,7 @@ export default {
     matic: {
       // dappURL创建地址: https://rpc-mainnet.maticvigil.com/
       url: process.env.MATIC_URL || "",
-      accounts: process.env.PRIVATE_KEY || "",
+      accounts: [process.env.PRIVATE_KEY || ""],
       blockGasLimit: 20000000,
       gasPrice: 400000000000,
       timeout: 90000,
@@ -66,7 +66,7 @@ export default {
     // polygon链上测试网
     mumbai: {
       url: process.env.MUMBAI_URL || "",
-      accounts: process.env.PRIVATE_KEY || "",
+      accounts: [process.env.PRIVATE_KEY || ""],
       blockGasLimit: 20000000,
       gasPrice: 1000000000,
     },
