@@ -1,0 +1,30 @@
+// tsconfig.json 文件是TypeScript编译器的配置文件,该配置文件告诉编译器应该编译哪些文件、输出到哪里去以及使用哪些编译选项
+{
+  "compilerOptions": {
+    // target: 指定目标ECMAScript版本 (例如,如果设置为 "es5",则编译器将生成ECMASession 5语法代码)
+    "target": "es2018",
+    // module: 指定输出模块类型。常用的值有 "commonjs"(默认值）和 "amd"
+    // 如果你的代码将在浏览器中运行,则应该使用 "amd"
+    "module": "commonjs",
+    // strict: 严格的类型检查选项
+    "strict": true,
+    // esModuleInterop: 在导入时生成ES6风格的默认导出
+    "esModuleInterop": true,
+    // outDir: 指定编译结果输出路径
+    // "dist"表示将所有输出文件放到项目根目录下的 dist 文件夹中
+    "outDir": "dist",
+    // "resolveJsonModule": 允许导入 JSON 格式的模块
+    "resolveJsonModule": true,
+    // "noImplicitAny": 选项用于控制是否允许隐式的any类型
+    // 当这个选项设置为true时,TypeScript会在函数缺少类型标注且不能从上下文中推断出类型时报错,以防止未定义行为
+    "noImplicitAny": true
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true
+  },
+  // include 选项用来指定需要编译的文件的路径,支持使用 glob 模式匹配多个目录或文件
+  "include": ["./scripts", "./test", "*.ts", "**/*.ts", "./tasks"],
+  // files 选项与 include 类似，但它直接指定某些文件需要被编译，不支持 glob 匹配
+  "files": ["./hardhat.config.ts"]
+  // include 的优先级高于 files
+  // 如果同时指定了这两个选项,编译器会首先处理 include 的内容,然后添加 files 中指定的文件到编译任务中
+}

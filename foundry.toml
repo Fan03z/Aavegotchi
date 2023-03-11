@@ -1,0 +1,18 @@
+# [profile.default] 配置块,定义了 Project 的默认配置
+[profile.default]
+# src: 指定源文件目录
+src = 'src'
+# out: 指定编译器生成的输出目录
+out = 'out'
+# libs: 定义一个字符串数组作为库路径列表.每个字符串都描述一个包括代码库文件的文件夹路径
+libs = ["node_modules", "lib"]
+# remappings: 可能会使用的 Remappings 列表
+# Remappings 允许更改 Solidity 导入语句的行为,以使它们链接到不同的依赖项,用于将导入指令重定向到其他 npm 包
+remappings = [
+    '@ensdomains/=node_modules/@ensdomains/',
+    '@openzeppelin/=node_modules/@openzeppelin/',
+    'hardhat/=node_modules/hardhat/',
+]
+# ffi: 表示是否开启 FFI 编译功能,FFI 为 Foreign Function Interface 的简称,意思是允许在不需要重新编译打包的情况下直接调用成熟的 C 语言底层库
+ffi = true
+# See more config options https://github.com/foundry-rs/foundry/tree/master/config

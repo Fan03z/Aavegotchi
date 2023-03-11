@@ -3,6 +3,7 @@ node_modules
 .secret2
 cache
 bin
+# 暂时忽略.env
 # .env
 artifacts
 coverage.json
