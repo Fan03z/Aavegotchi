@@ -3,8 +3,8 @@ node_modules
 .secret2
 cache
 bin
-# 暂时忽略.env
-# .env
+# 提供了 .env.example 文件
+.env
 artifacts
 coverage.json
 coverage

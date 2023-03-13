@@ -78,5 +78,46 @@ export default {
     //   blockGasLimit: 20000000,
     //   gasPrice: 2100000000,
     // },
+
+    solidity: {
+      compilers: [
+        {
+          version: "0.8.13",
+          settings: {
+            optimizer: {
+              enabled: true,
+              runs: 200,
+            },
+          },
+        },
+        {
+          version: "0.8.1",
+          settings: {
+            optimizer: {
+              enabled: true,
+              runs: 200,
+            },
+          },
+        },
+        {
+          version: "0.7.4",
+          settings: {
+            optimizer: {
+              enabled: true,
+              runs: 200,
+            },
+          },
+        },
+        {
+          version: "0.4.24",
+          settings: {
+            optimizer: {
+              enabled: true,
+              runs: 200,
+            },
+          },
+        },
+      ],
+    },
   },
 };
